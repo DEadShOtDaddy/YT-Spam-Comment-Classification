@@ -1,31 +1,60 @@
-# YouTube Spam Comment Classifier
+# YT-Spam-Comment-Classification
 
-A machine learning model to classify spam comments on YouTube videos, built to identify and filter out unwanted messages with high accuracy.
+[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![Framework](https://img.shields.io/badge/Framework-Scikit--learn-orange)](https://scikit-learn.org/)
+[![XGBoost](https://img.shields.io/badge/Framework-XGBoost-success)](https://xgboost.readthedocs.io/)
+[![Optuna](https://img.shields.io/badge/Optimization-Optuna-lightgrey)](https://optuna.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+## Project Overview
+
+YT-Spam-Comment-Classification is a machine learning project focused on detecting spam comments on YouTube using advanced natural language processing (NLP) techniques. The project employs an ensemble learning approach with XGBoost, combined with hyperparameter tuning using Optuna, to achieve robust spam detection performance.
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Model Architecture](#model-architecture)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Dataset](#dataset)
+- [Model Training](#model-training)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Introduction
-This project aims to provide a robust solution for detecting spam comments on YouTube using machine learning techniques. It leverages a variety of text processing techniques and classification algorithms to achieve high accuracy in spam detection.
+## Technologies Used
 
-## Features
-- Detects spam comments with high precision and recall.
-- Supports batch processing of YouTube comments.
-- Easy integration with existing systems.
-- Pre-trained model included for quick setup.
+The following key technologies and frameworks were used in the project:
 
-## Model Architecture
-The classifier is built using a combination of Natural Language Processing (NLP) and machine learning techniques:
-- **Text Preprocessing:** Tokenization, lowercasing, stopword removal, and stemming/lemmatization.
-- **Feature Extraction:** TF-IDF (Term Frequency-Inverse Document Frequency) and word embeddings.
-- **Classification Algorithms:** Utilizes models like Random Forest, SVM, or Neural Networks for spam detection.
+- **Python 3.x**: Programming language.
+- **Jupyter Notebook**: For creating and managing the codebase.
+- **Pandas**: Data manipulation and analysis.
+- **Scikit-learn**: Machine learning library used for feature extraction and model evaluation.
+- **TF-IDF Vectorizer**: Converts text data into numerical form using the Term Frequency-Inverse Document Frequency technique.
+- **XGBoost**: Gradient Boosting framework used for classification.
+- **Optuna**: Hyperparameter optimization framework to tune the XGBoost model parameters.
+- **Joblib**: For saving and loading trained models and other large data objects.
 
-## Dataset
-The model is trained on a dataset of YouTube comments collected from various channels, labeled as either 'spam' or 'not spam'. The dataset includes:
-- Number of comments: `x,xxx`
-- Number of spam comments: `x,xxx`
-- Number of non-spam comments: `x,xxx`
-  
+## Project Structure
+
+The repository structure is organized as follows:
+
+YT-Spam-Comment-Classification/
+├── Model.ipynb                # Main Jupyter Notebook with all steps and code.
+├── xgboost_spam_comment_classifier_optimized.json  # Optimized XGBoost model file.
+├── tfidf_vectorizer.pkl       # Saved TF-IDF vectorizer.
+├── README.md                  # Project README file.
+└── LICENSE                    # Project License.
+
+## Installation
+
+To run the code in this repository, make sure you have the following installed:
+
+- Python 3.x
+- Jupyter Notebook
+- The required Python packages, which can be installed using the following command:
+
+```bash
+pip install -r requirements.txt
+```
+**Note:** Create a `requirements.txt` file that includes the dependencies:
+
